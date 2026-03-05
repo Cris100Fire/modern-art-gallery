@@ -21,7 +21,7 @@ figure img {
   width: 100%;
 }
 
-img {
+.main-img img {
   display: block;
 }
 
