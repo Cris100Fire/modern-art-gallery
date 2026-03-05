@@ -1,0 +1,48 @@
+@use "../abstracts/mixins" as m;
+@use "../abstracts/variables" as v;
+
+.location {
+  main {
+    background-color: v.$black;
+    .location-map {
+      .map-2,
+      .map-tablet {
+        width: 100%;
+        display: none;
+      }
+      .map-mobile {
+        width: 100%;
+        @include m.breakpoint(tablet) {
+          display: none;
+        }
+      }
+      .map-tablet {
+        @include m.breakpoint(tablet) {
+          display: block;
+        }
+        @include m.breakpoint(desktopxl) {
+          display: none;
+        }
+      }
+      .map-2 {
+        @include m.breakpoint(desktopxl) {
+          display: block;
+        }
+      }
+      .btn-2 {
+        position: absolute;
+        top: 0;
+        left: 0;
+        @include m.breakpoint(tablet) {
+          left: 39px;
+        }
+        @include m.breakpoint(desktopxl) {
+          left: 156px;
+        }
+        @media (min-width: 1900px) {
+          left: 405px;
+        }
+      }
+    }
+  }
+}

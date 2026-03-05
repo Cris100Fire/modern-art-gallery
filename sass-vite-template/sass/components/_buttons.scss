@@ -1,0 +1,26 @@
+@use "../abstracts/mixins" as m;
+@use "../abstracts/variables" as v;
+
+.btn-1,
+.btn-2 {
+  &:hover {
+    span {
+      background-color: v.$brown;
+    }
+    img {
+      background-color: v.$black;
+    }
+  }
+  display: inline-flex;
+  align-items: center;
+  span {
+    background-color: v.$black;
+    color: white;
+    padding: 24px 32px 24px 35px;
+    font-size: 20px;
+  }
+  img {
+    background-color: v.$brown;
+    padding: 23.5px;
+  }
+}

@@ -1,0 +1,31 @@
+@use "../abstracts/mixins" as m;
+@use "../abstracts/variables" as v;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+  display: inline-block;
+  overflow-y: hidden;
+}
+
+figure img {
+  width: 100%;
+}
+
+img {
+  display: block;
+}
+
+body::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Edge */
+}

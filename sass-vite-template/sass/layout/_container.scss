@@ -1,0 +1,30 @@
+@use "../abstracts/mixins" as m;
+@use "../abstracts/variables" as v;
+
+.container {
+  padding-inline: 16px;
+  width: 100%;
+  margin: 0 auto;
+  @include m.breakpoint(tablet) {
+    padding-inline: 40px 39px;
+    max-width: 768px;
+  }
+  @include m.breakpoint(tablethorizontal) {
+    padding-inline: 80px 81px;
+    max-width: 1040px;
+  }
+  @include m.breakpoint(desktop) {
+    padding-inline: 120px 121px;
+    max-width: 1200px;
+  }
+  @include m.breakpoint(desktopxl) {
+    padding-inline: 164px 165px;
+    max-width: 1440px;
+  }
+}
+
+.wrapper {
+  @include m.breakpoint(desktopxl) {
+    background: linear-gradient(to right, v.$black 50%, white 50%);
+  }
+}

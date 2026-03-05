@@ -1,0 +1,158 @@
+@use "../abstracts/mixins" as m;
+@use "../abstracts/variables" as v;
+
+.experience {
+  h2 {
+    margin-bottom: 24px;
+    font-size: 48px;
+    line-height: 45px;
+    @include m.breakpoint(desktopxl) {
+      margin-bottom: 32px;
+      font-size: 60px;
+      line-height: 60px;
+    }
+  }
+  .first-exp {
+    @include m.breakpoint(tablet) {
+      display: flex;
+      flex-direction: row-reverse;
+      gap: 60px;
+      margin-bottom: 11px;
+    }
+    @include m.breakpoint(tablethorizontal) {
+      margin-bottom: 20px;
+      gap: 100px;
+    }
+    @include m.breakpoint(desktopxl) {
+      gap: 125px;
+      margin-bottom: 31px;
+    }
+    figure:first-of-type {
+      margin-bottom: 25px;
+      @include m.breakpoint(tablet) {
+        margin-bottom: 0;
+        img {
+          width: 398px;
+        }
+      }
+      @include m.breakpoint(desktop) {
+        display: none;
+      }
+    }
+    figure.desktop {
+      display: none;
+      @include m.breakpoint(desktop) {
+        display: block;
+        img {
+          width: 500px;
+        }
+      }
+      @include m.breakpoint(desktopxl) {
+        img {
+          width: auto;
+        }
+      }
+    }
+    .description-1 {
+      @include m.breakpoint(tablet) {
+        padding-top: 36px;
+      }
+      @include m.breakpoint(desktopxl) {
+        padding-top: 62px;
+      }
+      h2 {
+        span {
+          display: block;
+          @include m.breakpoint(desktopxl) {
+            display: inline;
+          }
+        }
+      }
+      p {
+        margin-bottom: 32px;
+      }
+    }
+  }
+
+  .inspiration {
+    @include m.breakpoint(tablet) {
+      display: flex;
+      gap: 11px;
+    }
+    @include m.breakpoint(tablethorizontal) {
+      gap: 20px;
+    }
+    @include m.breakpoint(desktop) {
+      gap: 25px;
+    }
+    @include m.breakpoint(desktopxl) {
+      gap: 30px;
+    }
+    .gallery_2 {
+      margin-bottom: 16px;
+      img {
+        height: 480px;
+        @include m.breakpoint(tablet) {
+          width: 398px;
+          height: 720px;
+        }
+        @include m.breakpoint(desktop) {
+          width: 500px;
+        }
+        @include m.breakpoint(desktopxl) {
+          width: auto;
+        }
+      }
+    }
+    .inspiration-content {
+      figure:first-of-type {
+        margin-bottom: 16px;
+        @include m.breakpoint(tablet) {
+          display: none;
+        }
+        @include m.breakpoint(tablethorizontal) {
+          display: block;
+          margin-bottom: 20px;
+        }
+        @include m.breakpoint(desktop) {
+          margin-bottom: 25px;
+        }
+        @include m.breakpoint(desktopxl) {
+          margin-bottom: 30px;
+        }
+      }
+      .gallery-tablet {
+        display: none;
+        @include m.breakpoint(tablet) {
+          margin-bottom: 11px;
+          display: block;
+          img {
+            height: 313px;
+          }
+        }
+        @include m.breakpoint(tablethorizontal) {
+          display: none;
+        }
+      }
+      .description-2 {
+        color: white;
+        background-color: v.$black;
+        padding: 48px 24px;
+        margin-bottom: 120px;
+        @include m.breakpoint(tablet) {
+          padding: 84px 28px;
+        }
+        @include m.breakpoint(tablethorizontal) {
+          padding: 92px 52px;
+        }
+        @include m.breakpoint(desktop) {
+          padding: 94px 52px;
+        }
+        @include m.breakpoint(desktopxl) {
+          padding: 63px 48px;
+          margin-bottom: 180px;
+        }
+      }
+    }
+  }
+}
